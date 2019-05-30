@@ -10,10 +10,10 @@ SYSTEM REQUIREMENTS<p>
 INSTALLING<p>
    After downloading the sofware, simply type "tar -zxvf L_RNA_scaffolder.tar.gz" in the base installation directory. The software is either written in C++ and compiled, or written in Perl. Therefore, it should not require any special compilation and is already provided as portable precompiled software. 
 
-INPUT FILES
+INPUT FILES<p>
    PSL file and genome fragment fasta file are necessary for scaffolding. The psl file was generated using BLAT program with "-noHead" option. The genome fragment file should be fasta format, consistent with the subject sequences when using BLAT program. Another file, named overlapping file, contain two columns. This file is not necessary but will avoid some interesting genome fragments not being scaffolding. 
 
-COMMANDS AND OPTIONS
+COMMANDS AND OPTIONS<p>
    L_RNA_scaffolder is run via the shell script: L_RNA_scaffolder.sh found in the base installation directory.
 
    Usage info is as follows:
@@ -31,7 +31,7 @@ COMMANDS AND OPTIONS
    -f : the minimal number of supporting reads (default: 1). If the number of the supporting reads for the connection is over the frequency, then this connection is reliable.
 
    Note: a typical L_RNA_scaffolder command might be:
-# sh L_RNA_scaffolder.sh -d ./ -i input.psl -j genome.fasta
+   sh L_RNA_scaffolder.sh -d ./ -i input.psl -j genome.fasta
 
 OUTPUT FILES
    When L_RNA_scaffolder completes, it will create an L_RNA_scaffolder.fasta output file in the output_dir/ output directory. 
