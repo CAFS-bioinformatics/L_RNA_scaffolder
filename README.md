@@ -16,25 +16,25 @@ INPUT FILES<p>
 COMMANDS AND OPTIONS<p>
    L_RNA_scaffolder is run via the shell script: L_RNA_scaffolder.sh found in the base installation directory.
 
-   Usage info is as follows:
+   Usage info is as follows:<p>
 
-   Required:
-   -d : the directory where the programs are in. 
-   -i : the output of transcripts alignment with BLAT. SeePSL format
-   -j : the genome fragments fasta file which will be scaffolded and was used as the database when aligning transcript reads.
-   Optional:
-   -r : some fragments which you might be interesting and will not be scaffolded. The file has two columns per row. One row stand for that two fragments might be connected and should not be scaffolded. 
-   -l : the threshold of alignment length coverage (default:0.95). If one read has a hit of which length coverage was over the threshold, then this read would be filtered out.
-   -p : the threshold of alignment identity (default: 0.9). If one alignment has an identity over the threshold, then the alignment is kept for the further analysis.
+   Required:<p>
+   -d : the directory where the programs are in. <p>
+   -i : the output of transcripts alignment with BLAT. <p>
+   -j : the genome fragments fasta file which will be scaffolded and was used as the database when aligning transcript reads.<p>
+   Optional:<p>
+   -r : some fragments which you might be interesting and will not be scaffolded. The file has two columns per row. One row stand for that two fragments might be connected and should not be scaffolded. <p>
+   -l : the threshold of alignment length coverage (default:0.95). If one read has a hit of which length coverage was over the threshold, then this read would be filtered out.<p>
+   -p : the threshold of alignment identity (default: 0.9). If one alignment has an identity over the threshold, then the alignment is kept for the further analysis.<p>
    -o : the directory where the output file is stored. The default output directory is equal to the program directory.
-   -e : The maximal intron length between two exons (default: 100kb). 
-   -f : the minimal number of supporting reads (default: 1). If the number of the supporting reads for the connection is over the frequency, then this connection is reliable.
+   -e : The maximal intron length between two exons (default: 100kb). <p>
+   -f : the minimal number of supporting reads (default: 1). If the number of the supporting reads for the connection is over the frequency, then this connection is reliable.<p>
 
-   Note: a typical L_RNA_scaffolder command might be:
-   sh L_RNA_scaffolder.sh -d ./ -i input.psl -j genome.fasta
+   Note: a typical L_RNA_scaffolder command might be:<p>
+   sh L_RNA_scaffolder.sh -d ./ -i input.psl -j genome.fasta<p>
 
-OUTPUT FILES
-   When L_RNA_scaffolder completes, it will create an L_RNA_scaffolder.fasta output file in the output_dir/ output directory. 
+OUTPUT FILES<p>
+   When L_RNA_scaffolder completes, it will create an L_RNA_scaffolder.fasta output file in the output_dir/ output directory. <p>
 
-SPEED
+SPEED<p>
    L_RNA_scaffolder spent 5 hours in scaffolding human genome fragments with a psl file of 43 GB generated from alignment of 8.3 millions of transcripts. However, the sequencing alignment is time-consuming when using BLAT to alignment nearly ten millions of reads. We recommend splitting the reads into multiple pieces and running the alignments simultaneously.
