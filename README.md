@@ -7,9 +7,6 @@ Use long transcriptome reads to scaffold genomes
 SYSTEM REQUIREMENTS<p>
    The software, written with Shell script, consists of C++ programs and Perl programs. The C programs have been precompiled and therefore could be directly executed. To run Perl program, perl and Bioperl modules should be installed on the system. Further, the program required PSL file as input file. Thus, BLAT program should also be installed on the system. L_RNA_scaffolder has been tested and is supported on Linux. 
 
-INSTALLING<p>
-   After downloading the sofware, simply type "tar -zxvf L_RNA_scaffolder.tar.gz" in the base installation directory. The software is either written in C++ and compiled, or written in Perl. Therefore, it should not require any special compilation and is already provided as portable precompiled software. 
-
 INPUT FILES<p>
    PSL file and genome fragment fasta file are necessary for scaffolding. The psl file was generated using BLAT program with "-noHead" option. The genome fragment file should be fasta format, consistent with the subject sequences when using BLAT program. Another file, named overlapping file, contain two columns. This file is not necessary but will avoid some interesting genome fragments not being scaffolding. 
 
